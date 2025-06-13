@@ -4,7 +4,8 @@
 
 def es_bisiesto(año):
     
-    # Función para verificar si un año es bisiesto - si el año es divisible por 4, pero no por 100, excepto si es divisible por 400
+    # Función para verificar si un año es bisiesto - si el año es divisible por 4, 
+    # pero no por 100, excepto si es divisible por 400
     
     if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
         return True
@@ -167,10 +168,8 @@ def main():
     
     print(f"Dígitos primos considerados: {sorted(digitos_primos)}")
     print()
-    
     # Contar cuántos conjuntos contienen al menos un dígito primo
     conjuntos_con_primos = 0
-    
     # Verificar cada conjunto
     for i in range(len(conjuntos)):
         # Verificar si el conjunto actual tiene intersección con los dígitos primos
@@ -179,19 +178,19 @@ def main():
         if tiene_primos:
             # Mostrar qué dígitos primos tiene este conjunto
             primos_en_conjunto = conjuntos[i].intersection(digitos_primos)
-            print(f"✓ {nombres[i]} contiene dígitos primos: {sorted(primos_en_conjunto)}")
+            print(f"{nombres[i]} contiene dígitos primos: {sorted(primos_en_conjunto)}")
             conjuntos_con_primos = conjuntos_con_primos + 1
         else:
-            print(f"✗ {nombres[i]} NO contiene dígitos primos")
+            print(f"{nombres[i]} NO contiene dígitos primos")
     
     print()
     print(f"Total de conjuntos: {len(conjuntos)} | Conjuntos con primos: {conjuntos_con_primos}")
     
     # Evaluar la condición
     if conjuntos_con_primos > len(conjuntos) // 2:
-        print(f"✓ CONCLUSIÓN: El grupo TIENE predominancia de números primos")
+        print(f"CONCLUSIÓN: El grupo TIENE predominancia de números primos")
     else:
-        print(f"✗ CONCLUSIÓN: El grupo NO tiene predominancia de números primos")
+        print(f"CONCLUSIÓN: El grupo NO tiene predominancia de números primos")
     
   
     print("Presione Enter para continuar...")
@@ -255,12 +254,12 @@ def main():
             años_bisiestos_encontrados.append(año)
     
     if hay_bisiesto:
-        print(f"Alguien nació en un año bisiesto: {años_bisiestos_encontrados}")
+        print(f"Tenemos un año especial: {años_bisiestos_encontrados}")
     else:
         print("Nadie del grupo nació en año bisiesto")
     
-    # Calcular edades actuales (asumiendo que estamos en 2025)
-    año_actual = 2025
+    # Calcular edades actuales (asumiendo que estamos en 2024)
+    año_actual = 2024
     edades_actuales = []
     
     print(f"\nEdades actuales (año {año_actual}):")
