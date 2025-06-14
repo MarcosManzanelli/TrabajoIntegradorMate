@@ -51,4 +51,4 @@ El objetivo fue aplicar conceptos de matemática discreta, teoría de conjuntos,
 Este programa se ejecuta desde consola:
 
 ```bash
-python trabajo_integrador2.py
+python INTEGRADOR_MATEMATICA.py
